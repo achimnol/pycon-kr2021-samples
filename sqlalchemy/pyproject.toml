@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "pycon-kr2021-sample-sqlalchemy"
+version = "0.1.0"
+description = ""
+authors = ["Joongi Kim <me@daybreaker.info>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+SQLAlchemy = "^1.4.22"
+asyncpg = "^0.23.0"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
