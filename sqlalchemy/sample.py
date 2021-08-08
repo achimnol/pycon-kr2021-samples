@@ -24,5 +24,6 @@ async def main():
         result = await conn.stream(sa.select(tbl))
         async for row in result:
             print(row.id, row.val)
+    await engine.dispose()
 
 asyncio.run(main())

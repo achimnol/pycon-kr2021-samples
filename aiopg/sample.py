@@ -11,9 +11,7 @@ tbl = sa.Table(
 
 async def create_table(conn):
     await conn.execute('DROP TABLE IF EXISTS tbl')
-    await conn.execute('''CREATE TABLE tbl (
-    id serial PRIMARY KEY,
-    val varchar(255))''')
+    await conn.execute('CREATE TABLE tbl (id serial PRIMARY KEY, val varchar(255))')
 
 async def main():
     async with create_engine(
