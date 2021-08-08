@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "aiopg",
+		},
+		{
+			"path": "asyncpgsa",
+		},
+		{
+			"path": "databases",
+		},
+		{
+			"path": "sqlalchemy",
+		}
+	],
+	"settings": {}
+}
