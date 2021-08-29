@@ -6,8 +6,9 @@ authors = ["Joongi Kim <me@daybreaker.info>"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
-SQLAlchemy = "^1.4.22"
 asyncpg = "^0.23.0"
+SQLAlchemy = {extras = ["asyncio", "asyncpg"], version = "^1.4.23"}
+greenlet = "^1.1.1"
 
 [tool.poetry.dev-dependencies]
 

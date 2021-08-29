@@ -56,7 +56,7 @@ sqlcipher = ["sqlcipher3-binary"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "d95cd01c6ce7da0d6ff8face8080a935051324bca62902e546feb37f8bac8588"
+content-hash = "ab2cbbc827d72b4851c5a9f9854ce64a67cbd1b1531985a6ac85da53b0c6ac13"
 
 [metadata.files]
 asyncpg = [
