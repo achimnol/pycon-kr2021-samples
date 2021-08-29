@@ -8,12 +8,11 @@ Base = declarative_base()
 
 class A(Base):
     __tablename__ = "a"
+    __mapper_args__ = {"eager_defaults": True}
 
     id = Column(Integer, primary_key=True)
     val = Column(String(255))
     created_at = Column(sa.DateTime, server_default=sa.func.now())
-
-    __mapper_args__ = {"eager_defaults": True}
 
 async def create_table(conn):
     await conn.run_sync(Base.metadata.drop_all)
@@ -26,7 +25,9 @@ async def main():
     async with engine.begin() as conn:
         await create_table(conn)
     async_session = sessionmaker(
-        engine, expire_on_commit=False, class_=AsyncSession
+        bind=engine,
+        expire_on_commit=False,
+        class_=AsyncSession,
     )
     async with async_session() as session:
         async with session.begin():
